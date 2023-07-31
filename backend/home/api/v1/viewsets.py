@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from home.models import Cddfs,Cddfs,Cddfs
-from .serializers import CddfsSerializer,CddfsSerializer,CddfsSerializer
+from home.models import Cddfs,Zass,Cddfs,Zass,Cddfs,Zass
+from .serializers import CddfsSerializer,ZassSerializer,CddfsSerializer,ZassSerializer,CddfsSerializer,ZassSerializer
 from rest_framework import authentication
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from rest_framework.viewsets import ModelViewSet, ViewSet
@@ -37,3 +37,8 @@ class CddfsViewSet(viewsets.ModelViewSet):
     serializer_class = CddfsSerializer
     authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
     queryset = Cddfs.objects.all()
+
+class ZassViewSet(viewsets.ModelViewSet):
+    serializer_class = ZassSerializer
+    authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
+    queryset = Zass.objects.all()

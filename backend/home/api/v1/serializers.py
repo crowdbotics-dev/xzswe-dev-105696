@@ -1,5 +1,5 @@
 from django.contrib.auth import get_user_model
-from home.models import Cddfs,Cddfs
+from home.models import Cddfs,Zass,Cddfs,Zass
 from django.http import HttpRequest
 from django.utils.translation import ugettext_lazy as _
 from allauth.account import app_settings as allauth_settings
@@ -80,4 +80,10 @@ class CddfsSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Cddfs
+        fields = "__all__"
+
+class ZassSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Zass
         fields = "__all__"
