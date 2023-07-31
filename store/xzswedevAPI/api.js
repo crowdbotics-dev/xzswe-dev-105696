@@ -32,6 +32,24 @@ function api_v1_login_create(payload) {
 function api_v1_signup_create(payload) {
   return xzswedevAPI.post(`/api/v1/signup/`, payload)
 }
+function api_v1_zass_list(payload) {
+  return xzswedevAPI.get(`/api/v1/zass/`)
+}
+function api_v1_zass_create(payload) {
+  return xzswedevAPI.post(`/api/v1/zass/`, payload)
+}
+function api_v1_zass_retrieve(payload) {
+  return xzswedevAPI.get(`/api/v1/zass/${payload.id}/`)
+}
+function api_v1_zass_update(payload) {
+  return xzswedevAPI.put(`/api/v1/zass/${payload.id}/`, payload)
+}
+function api_v1_zass_partial_update(payload) {
+  return xzswedevAPI.patch(`/api/v1/zass/${payload.id}/`, payload)
+}
+function api_v1_zass_destroy(payload) {
+  return xzswedevAPI.delete(`/api/v1/zass/${payload.id}/`)
+}
 function rest_auth_login_create(payload) {
   return xzswedevAPI.post(`/rest-auth/login/`, payload)
 }
@@ -75,6 +93,12 @@ export const apiService = {
   api_v1_cddfs_destroy,
   api_v1_login_create,
   api_v1_signup_create,
+  api_v1_zass_list,
+  api_v1_zass_create,
+  api_v1_zass_retrieve,
+  api_v1_zass_update,
+  api_v1_zass_partial_update,
+  api_v1_zass_destroy,
   rest_auth_login_create,
   rest_auth_logout_retrieve,
   rest_auth_logout_create,
